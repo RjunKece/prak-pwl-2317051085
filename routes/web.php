@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PageController; // Pastikan ini ada
 use App\Http\Controllers\MataKuliahController;
-use App\Http\Controllers\DosenController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +30,3 @@ Route::post('/user/store', [PageController::class, 'store']);
 // Route ini sekarang harus menunjuk ke view yang sudah dipindah
 Route::get('/user', [PageController::class, 'user']);
 Route::resource('matakuliah', MataKuliahController::class);
-Route::resource('dosen', DosenController::class);
