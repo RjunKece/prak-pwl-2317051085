@@ -2,14 +2,17 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids; // 1. Tambahkan ini
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MataKuliah extends Model
+class Matakuliah extends Model
 {
-    use HasFactory;
-    protected $table = 'mata_kuliah';
+    use HasFactory, HasUuids; // 2. Tambahkan HasUuids di sini
+
+    // 3. Tambahkan properti $fillable
     protected $fillable = [
-        'id'
+        'nama_matakuliah',
+        'sks',
     ];
 }
