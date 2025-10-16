@@ -4,7 +4,7 @@
     <h1>Tambah User</h1>
 
     <form action="{{ url('/user/store') }}" method="POST">
-        @csrf  {{-- <--- JANGAN LUPA BARIS INI! --}}
+        @csrf 
 
         <div class="mb-3">
             <label for="nama" class="form-label">Nama</label>
